@@ -21,7 +21,7 @@ function App() {
                     <Route path={''} element={<Login/>}/>
                     <Route path={'register'} element={<Register/>}/>
                     {
-                        user != {} ?
+                        user !== {} ?
                             <Route path='/home' element={<Home/>}>
                                 <Route path='list-blog' element={<ListBlog/>}></Route>
                                 <Route path='add-blog' element={<AddBlog/>}></Route>
