@@ -14,10 +14,16 @@ export default function Login() {
         console.log(res)
         if (res.payload.data.token) {
             const {role} = res.payload.data.user
-            if (role === 1) {
-                navigate('home')
-            } else if (role === 2) {
+            const {status} = res.payload.data.user
+            if (role === 2) {
                 console.log("admin")
+            } else if (role === 1) {
+                if (status === 1){
+                    navigate('home')
+                }else if (status===2){
+                    alert("taài khoản đã bị khóa")
+                }
+
             }
         } else {
             alert('nhập lại')
