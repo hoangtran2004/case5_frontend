@@ -1,22 +1,49 @@
 import {Field, Form, Formik} from "formik";
 import '../style/login-page.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+
+import {login} from "./services/userService";
+
+
 export default function Login() {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const handleLogin = async (values) => {
+        let res = await dispatch(login(values));
+        console.log(res)
+        if (res.payload.data.token) {
+            const {role} = res.payload.data.user
+            if (role === 1) {
+                navigate('home')
+            } else if (role === 2) {
+                console.log("admin")
+            }
+        } else {
+            alert('nhập lại')
+        }
+
+
+    }
+
     return (
         <>
             <div className="container">
                 <div className={'row'}>
                     <div className="col-6">
                         <h1>Login</h1>
-                        <Formik initialValues={{user: '', password: ''}} onSubmit={() => {
-
-                        }}>
+                        <Formik
+                            initialValues={{name: '', password: ''}}
+                            onSubmit={(values,{resetForm}) => {
+                                handleLogin(values).then();
+                                resetForm()
+                            }}>
                             <Form>
                                 <label></label>
-                                <Field name={'user'} id={'user'} type={'text'} placeholder={'Your account'}
+                                <Field name={'name'} type={'text'} placeholder={'Your account'}
                                        class={'form-control'} required/>
                                 <label></label>
-                                <Field name={'password'} id={'password'} type={'password'} placeholder={'Password'}
+                                <Field name={'password'} type={'password'} placeholder={'Password'}
                                        class={'form-control'} required/>
                                 <button className={'btn btn-primary'} style={{
                                     width: '200px',
@@ -38,7 +65,7 @@ export default function Login() {
                             marginBottom: '20px',
                             borderRadius: '8px',
 
-                        }} type={'button'}><Link to={'/register'} style={{textDecoration:"none",color:'white'}}>Register</Link>
+                        }}><Link to={'/register'} style={{textDecoration: "none", color: 'white'}}>Register</Link>
                         </button>
                     </div>
                 </div>
