@@ -2,7 +2,6 @@ import {Field, Form, Formik} from "formik";
 import '../style/login-page.css'
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-
 import {login} from "./services/userService";
 
 
@@ -11,25 +10,22 @@ export default function Login() {
     const navigate = useNavigate();
     const handleLogin = async (values) => {
         let res = await dispatch(login(values));
-        console.log(res)
+        console.log("res",res)
         if (res.payload.data.token) {
-            const {role} = res.payload.data.user
-            const {status} = res.payload.data.user
+            const {role, status} = res.payload.data.user
+            console.log("st",typeof status)
             if (role === 2) {
                 console.log("admin")
             } else if (role === 1) {
                 if (status === 1){
-                    navigate('home')
+                    navigate('/home')
                 }else if (status===2){
-                    alert("taài khoản đã bị khóa")
+                    alert("tài khoản đã bị khóa")
                 }
-
             }
         } else {
             alert('nhập lại')
         }
-
-
     }
 
     return (

@@ -8,9 +8,9 @@ export default function Home() {
         <div className="row">
             <div className="col-12">
              <NavBar></NavBar>
-                <Outlet></Outlet>
                 <Main></Main>
                 <Footer></Footer>
+                <Outlet></Outlet>
             </div>
         </div>
         </>

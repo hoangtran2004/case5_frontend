@@ -3,17 +3,18 @@ import {login} from "../../pages/services/userService";
 import {register} from "../../pages/services/userService";
 
 const initialState = {
-    currenUser:{}
+    currentUser:{}
 }
 const userSlice = createSlice({
     name:'user',
     initialState,
     extraReducers: builder => {
         builder.addCase(login.fulfilled,(state,action)=>{
-            state.currenUser = action.payload;
+            console.log(action.payload.data)
+            state.currentUser = action.payload.data;
         })
         builder.addCase(register.fulfilled,(state,action)=>{
-            state.currenUser = action.payload;
+            state.currentUser = action.payload;
         })
     }
 })
