@@ -15,6 +15,7 @@ const userSlice = createSlice({
         })
         builder.addCase(register.fulfilled,(state,action)=>{
             state.currentUser = action.payload;
+            localStorage.setItem('user',JSON.stringify(action.payload.data))
         })
     }
 })

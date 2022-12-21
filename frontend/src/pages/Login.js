@@ -10,16 +10,16 @@ export default function Login() {
     const navigate = useNavigate();
     const handleLogin = async (values) => {
         let res = await dispatch(login(values));
-        console.log("res",res)
+        console.log("res", res)
         if (res.payload.data.token) {
             const {role, status} = res.payload.data.user
-            console.log("st",typeof status)
+            console.log("st", typeof status)
             if (role === 2) {
                 console.log("admin")
             } else if (role === 1) {
-                if (status === 1){
+                if (status === 1) {
                     navigate('/home')
-                }else if (status===2){
+                } else if (status === 2) {
                     alert("tài khoản đã bị khóa")
                 }
             }
@@ -30,13 +30,17 @@ export default function Login() {
 
     return (
         <>
-            <div className="container">
-                <div className={'row'}>
-                    <div className="col-6">
-                        <h1>Login</h1>
+            <div style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1483199095378-ce6e77cd1c0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=948&q=80')`,
+                minHeight: "100vh",
+                backgroundSize: "cover"
+            }}>
+                <div className="RegisterFormWrapper" style={{position:"absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)"}}>
+                    <div className="RegisterForm" style={{ display:"inline-block", padding: "20px 30px", borderRadius: "8px"}}>
+                        <h1 className={"text-center"} style={{color:"white"}} >Login</h1>
                         <Formik
                             initialValues={{name: '', password: ''}}
-                            onSubmit={(values,{resetForm}) => {
+                            onSubmit={(values, {resetForm}) => {
                                 handleLogin(values).then();
                                 resetForm()
                             }}>
@@ -70,9 +74,10 @@ export default function Login() {
                         }}><Link to={'/register'} style={{textDecoration: "none", color: 'white'}}>Register</Link>
                         </button>
                     </div>
-                </div>
 
+                </div>
             </div>
+
 
         </>
 

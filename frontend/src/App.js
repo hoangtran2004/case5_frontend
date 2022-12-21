@@ -16,7 +16,7 @@ function App() {
     console.log(user)
     return (
         <>
-            <div className="container-fluid">
+
                 <Routes>
                     <Route path={''} element={<Login/>}/>
                     <Route path={'register'} element={<Register/>}/>
@@ -31,7 +31,6 @@ function App() {
                     <Route path={'/login'} element={<Login/>}/>
                     <Route path={'*'} element={<NotFound></NotFound>}/>
                 </Routes>
-            </div>
         </>
 
     );

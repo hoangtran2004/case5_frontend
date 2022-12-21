@@ -8,6 +8,7 @@ export default function AddBlog(){
     //firebase
     const [imageUpload, setImageUpload] = useState(null);
     const [imageUrls, setImageUrls] = useState([]);
+    const [img,setImg]=useState('')
 
     const imagesListRef = ref(storage, "images/");
     const uploadFile = () => {
@@ -18,9 +19,12 @@ export default function AddBlog(){
                 setImageUrls((prev) => [...prev, url]);
             });
         });
+        let newImg = ''
         imageUrls.map((url)=>{
-            console.log(url)
+            newImg = url
         })
+        setImg(newImg)
+        console.log("img",img)
     };
 
     useEffect(() => {
@@ -37,6 +41,8 @@ export default function AddBlog(){
         <>
             <div className={'row'}>
                 <div className={'col-12'}>
+
+                    {/*//upload files*/}
                     <input
                         type="file"
                         onChange={(event) => {
@@ -44,6 +50,7 @@ export default function AddBlog(){
                         }}
                     />
                     <button onClick={uploadFile}> Upload Image</button>
+                    {/*//--end---*/}
                     Add Blog
                 </div>
             </div>
