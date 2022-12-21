@@ -27,7 +27,6 @@ export default function Login() {
             alert('nhập lại')
         }
     }
-
     return (
         <>
             <div style={{
@@ -61,7 +60,6 @@ export default function Login() {
                                 </button>
                                 <hr style={{border: 'solid 0.5px lightgrey', width: '520px'}}/>
                                 <p style={{color: "lightgray"}}>Don't have account? Register now.</p>
-
                             </Form>
                         </Formik>
                         <button className={'btn btn-success'} style={{
@@ -70,7 +68,6 @@ export default function Login() {
                             marginLeft: '160px',
                             marginBottom: '20px',
                             borderRadius: '8px',
-
                         }}><Link to={'/register'} style={{textDecoration: "none", color: 'white'}}>Register</Link>
                         </button>
                     </div>

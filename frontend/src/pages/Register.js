@@ -5,7 +5,6 @@ import {register} from "./services/userService";
 
 
 export default function Register() {
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleRegister = async (values) => {
