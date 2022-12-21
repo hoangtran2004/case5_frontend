@@ -1,14 +1,15 @@
+
 .container-main {
     border: none;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 10px;
 }
 
 .avatar {
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     margin-top: 40px;
     object-fit: cover;
 }
@@ -28,6 +29,8 @@
 .title {
     margin-left: 50px;
     margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .main-line {
@@ -37,13 +40,36 @@
 
 .emotion:hover {
     border-radius: 5px;
-    background-color: rgba(143, 144, 145,0.5);
-    height:35px;
-    }
+    background-color: rgba(143, 144, 145, 0.2);
+    height: 35px;
+}
 
 .comment:hover {
     border-radius: 5px;
-    background-color: rgba(143, 144, 145,0.5);
-    height:35px;
+    background-color: rgba(143, 144, 145, 0.2);
+    height: 35px;
     text-align: center;
+}
+
+.contain-create-post {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.time-post{
+    font-size: 10px;
+    margin-left: 11px;
+    line-height: 0.1;
+}
+.content{
+    margin-left: 50px;
+}
+.navbar{
+    background-color: white !important;
+    height: 65px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 50px;
 }

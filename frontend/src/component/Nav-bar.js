@@ -1,49 +1,49 @@
-export default function NavBar(){
-    return(
+import {Link, useNavigate} from "react-router-dom";
+import {Field, Form, Formik} from "formik";
+export default function NavBar() {
+    const navigate =useNavigate()
+    return (
+        <div style={{marginBottom:'100px'}}>
+            <div className="row">
+                <div className="col-12" style={{position: "fixed", zIndex: 100}}>
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
 
-        <div className="row" style={{marginBottom:'15px'}}>
-            <div className="col-12">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="/home"><img src="../../public/favpng_logo.png" alt="Home" style={{
-                        height:'10px',width:'10px'
-                    }}/></a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                        <Link to={"/home"}>
+                            <img src="https://i.pinimg.com/736x/7c/f5/17/7cf5174188de96c8cacc7ad2bb97943a--elephant-logo-gajah.jpg" alt="logo" className={'logo'}/>
+                        </Link>
+                        <Link className="navbar-brand" to="/home">Home</Link>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav mr-auto">
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div className="dropdown-menu">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled">Disabled</a>
-                            </li>
-                        </ul>
+                                <li>
+                                    <Formik initialValues={{
+                                        search: ''
+                                    }} onSubmit={(values) => {
+                                        console.log(values)
+                                    }}>
+                                        <Form className="form-inline my-2 my-lg-0" >
+                                            <Field className="form-control mr-sm-2" type="search"
+                                                    name={"search"}
+                                                   placeholder="Search" style={{width:'468px',marginLeft:'325px',borderRadius:'50px',height:'45px'}}></Field>
+                                            <button className="btn btn-outline-success my-2 my-sm-0">Search</button>
+                                        </Form>
+                                    </Formik>
+                                </li>
+                            </ul>
+                            <div className="form-inline my-2 my-lg-0">
 
-                    </div>
-                    <form className="form-inline my-2 my-lg-0">
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
-                    </form>
-                </nav>
+                                <button className=" ml-3 btn btn-outline-danger my-2 my-sm-0" type="submit"
+                                        onClick={() => {
+                                            localStorage.clear()
+                                            navigate('/')
+                                        }}>Logout
+                                </button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
-    )
+    );
 }

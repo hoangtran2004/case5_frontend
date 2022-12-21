@@ -9,14 +9,13 @@ export default function Login() {
                     <div className="col-6">
                         <h1>Login</h1>
                         <Formik initialValues={{user: '', password: ''}} onSubmit={() => {
-
                         }}>
                             <Form>
                                 <label></label>
-                                <Field name={'user'} id={'user'} type={'text'} placeholder={'Your account'}
+                                <Field name={'user'} id={'user'} type={'text'} placeholder={'Tên tài khoản'}
                                        class={'form-control'} required/>
                                 <label></label>
-                                <Field name={'password'} id={'password'} type={'password'} placeholder={'Password'}
+                                <Field name={'password'} id={'password'} type={'password'} placeholder={'Mật khẩu'}
                                        class={'form-control'} required/>
                                 <button className={'btn btn-primary'} style={{
                                     width: '200px',
@@ -24,22 +23,22 @@ export default function Login() {
                                     marginLeft: '160px',
                                     marginTop: '20px',
                                     borderRadius: '8px'
-                                }}>Login
+                                }}>Đăng nhập
                                 </button>
                                 <hr style={{border: 'solid 0.5px lightgrey', width: '520px'}}/>
-                                <p style={{color: "lightgray"}}>Don't have account? Register now.</p>
+                                <p style={{color: "lightgray"}}>Chưa có tài khoản? Đăng kí ngay.</p>
+                                <button className={'btn btn-success'} style={{
+                                    width: '200px',
+                                    height: '50px',
+                                    marginLeft: '160px',
+                                    marginBottom: '20px',
+                                    borderRadius: '8px',
+
+                                }} type={'button'}><Link to={'/register'} style={{textDecoration:"none",color:'white'}}>Đăng kí</Link>
+                                </button>
 
                             </Form>
                         </Formik>
-                        <button className={'btn btn-success'} style={{
-                            width: '200px',
-                            height: '50px',
-                            marginLeft: '160px',
-                            marginBottom: '20px',
-                            borderRadius: '8px',
-
-                        }} type={'button'}><Link to={'/register'} style={{textDecoration:"none",color:'white'}}>Register</Link>
-                        </button>
                     </div>
                 </div>
 

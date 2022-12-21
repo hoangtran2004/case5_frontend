@@ -1,0 +1,35 @@
+.contain-create-post{
+    margin-top: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.up-status p{
+    text-align: center;
+    color: grey;
+    padding: 6px;
+
+}
+.up-status{
+    height: 38px;
+    width: 320px;
+    background-color:rgba(50, 50, 93, 0.2);
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.avatar-post{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+.up-status:hover{
+    background-color: rgba(143, 144, 145,0.2);
+
+}
+.form-control{
+    width: 467px;
+}
