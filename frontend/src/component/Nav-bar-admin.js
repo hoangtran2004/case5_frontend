@@ -33,8 +33,8 @@ export default function NavBarAdmin() {
                                         <Form className="form-inline my-2 my-lg-0"
                                               style={{position: 'relative', left: "186px"}}>
                                             <Field className="form-control mr-sm-2" type="search"
-                                                   style={{width: "300px",marginLeft:"200px"}} name={"search"}
-                                                   placeholder="Search"></Field>
+                                                   style={{width:'468px',marginLeft:'30px',borderRadius:'50px',height:'45px'}} name={"search"}
+                                                   placeholder="Search" ></Field>
                                             <button className="btn btn-outline-success my-2 my-sm-0">Tìm kiếm</button>
                                         </Form>
                                     </Formik>

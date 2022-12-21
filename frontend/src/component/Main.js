@@ -20,7 +20,7 @@ export default function Main() {
                 blogs.map((item) => (
                     <div className="row" style={{marginTop: '10px'}}>
                         <div className="col-12">
-                            <div className="col-4 offset-4">
+                            <div className="col-6 offset-3">
                                 <div className="container-main">
                                     {/*header*/}
                                     <div className="main-header">
@@ -35,7 +35,7 @@ export default function Main() {
 
                                             <div>
                                                 <Link to={'#'}>
-                                                    <p className="nick-name">Nick name </p>
+                                                    <p className="nick-name">{item.name} </p>
                                                 </Link>
                                                 <div className={'time-post'}>
                                                     {item.time.split("",10)}

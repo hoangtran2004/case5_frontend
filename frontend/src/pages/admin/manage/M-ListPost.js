@@ -6,7 +6,6 @@ export default function MListUser() {
     const dispatch = useDispatch();
 
     const listUser = useSelector(state => {
-        console.log(state.admin.admin)
         return state.admin.admin
     });
     useEffect(() => {

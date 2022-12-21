@@ -16,6 +16,7 @@ export default function ListBlog() {
        <>
            {blog.map((item)=>(
                <h1>{item.title}</h1>
+
            ))}
        </>
     )
