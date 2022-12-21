@@ -24,7 +24,7 @@ function App() {
 
                     <Route path={''} element={<Login/>}/>
                     <Route path={'register'} element={<Register/>}/>
-                    {user !== {} ?
+                    {user !== null ?
                         <Route path={'home'} element={<Home/>}>
                             <Route path={''} element={<Main/>}/>
                             <Route path={'tiny'} element={<TinyEditor/>}/>

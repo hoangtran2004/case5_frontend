@@ -34,7 +34,7 @@ export default function NavBar() {
 
                                 <button className=" ml-3 btn btn-outline-danger my-2 my-sm-0" type="submit"
                                         onClick={() => {
-                                            localStorage.clear()
+                                            localStorage.clear('')
                                             navigate('/')
                                         }}>Logout
                                 </button>
