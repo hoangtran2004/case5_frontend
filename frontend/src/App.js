@@ -28,15 +28,16 @@ function App() {
                         <Route path={'home'} element={<Home/>}>
                             <Route path={''} element={<Main/>}/>
                             <Route path={'tiny'} element={<TinyEditor/>}/>
-                        </Route> :
-                        <Route path={'*'} element={<Login/>}/>
+                            <Route path={'my-profile'} element={<TinyEditor/>}/>
+                        </Route>
+                                   :
+                            <Route path={'*'} element={<Login/>}></Route>
                     }
+                 <Route path={'admin'} element={<Admin/>}>
+                     <Route path={''} element={<MListUser/>}></Route>
+                     <Route path={'listPost'} element={<MListPost/>}></Route>
+                 </Route>
 
-                    {/*<Route path={'admin'} element={<Admin/>}>*/}
-                    {/*    <Route path={''} element={<MListUser/>}/>*/}
-                    {/*    <Route path={'listBlogs'} element={<MListPost/>}/>*/}
-
-                    {/*</Route>*/}
                 </Routes>
 
             </div>

@@ -1,7 +1,12 @@
 import '../style/post-status.css'
 import {Field, Form, Formik} from "formik";
 import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 export default function PostStatus() {
+    const user = useSelector(state => {
+        console.log(state)
+        return state.user.currentUser.user
+    })
     return(
         <>
         <div className="row">
@@ -13,7 +18,7 @@ export default function PostStatus() {
                         <Form>
                             <div className="contain-create-post">
                                 <div className="row offset-1">
-                                    <img src="https://funkylife.in/wp-content/uploads/2021/06/good-morning-image-492.jpg" alt="" className={'avatar-post'}/>
+                                    <img src={user.avatar} alt={user.name} className={'avatar-post'}/>
                                     <div className={"row offset-1"}>
                                         <Link to={'tiny'} style={{textDecoration:'none'}}>
                                             <div className="up-status" data-toggle="modal" data-target="#exampleModal" >

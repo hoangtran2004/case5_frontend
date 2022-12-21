@@ -14,7 +14,7 @@ export default function Login() {
             const {role, status} = res.payload.data.user
             console.log("st", typeof status)
             if (role === 2) {
-                console.log("admin")
+                navigate('/admin')
             } else if (role === 1) {
                 if (status === 1) {
                     navigate('/home')
