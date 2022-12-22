@@ -41,7 +41,7 @@ export default function ListBlog() {
                                                             <p className="nick-name">{item.name} </p>
                                                         </Link>
                                                         <div className={'time-post'}>
-                                                            {item.time.split("",10)}
+                                                            {item.time}
                                                         </div>
                                                     </div>
                                                 </div>

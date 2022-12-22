@@ -2,9 +2,10 @@ import customAxios from "./api";
 import {createAsyncThunk} from "@reduxjs/toolkit";
 
 export const adminGetBlog = createAsyncThunk(
-    'admin/post',
+    'admin/posts',
     async () => {
         const res = await customAxios.get('posts');
+        console.log(res)
         return res.data
     }
 )

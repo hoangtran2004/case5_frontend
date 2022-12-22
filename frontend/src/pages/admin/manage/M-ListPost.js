@@ -4,8 +4,7 @@ import {adminDeletePost, adminGetBlog} from "../../../services/adminService";
 
 export default function MListUser() {
     const dispatch = useDispatch();
-    const listUser = useSelector(state => {
-        console.log(state)
+    const listPosts = useSelector(state => {
         return state.admin.admin
     });
     useEffect(() => {
@@ -30,7 +29,7 @@ export default function MListUser() {
                     <th scope="col">Thao tác</th>
                 </tr>
                 </thead>
-                {listUser.map((item, index) => (
+                {listPosts.map((item, index) => (
                     <tbody>
                     <tr>
                         <td>{index + 1}</td>
@@ -38,7 +37,7 @@ export default function MListUser() {
                         <td>{item.idU}</td>
                         <td>{item.status === 1 ? "Công khai" : "Chỉ mình tôi"}</td>
                         <td>{item.like}</td>
-                        <td>{item.time.split("", 10)}</td>
+                        <td>{item.time}</td>
                         <td>{item.name}</td>
                         <td>{item.title}</td>
                         <td>{item.content}</td>
