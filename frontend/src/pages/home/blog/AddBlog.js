@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Field, Form, Formik} from "formik";
 import { useNavigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch } from "react-redux";
 import {addBlogs} from "../../../services/blogsService";
 import {storage} from "../../../firebase";
 import {getDownloadURL, listAll, ref, uploadBytes} from "firebase/storage";
@@ -19,8 +19,9 @@ function AddBlog() {
         let data = {
             ...values,
             idU: user.id,
-            url: img
+            img: img
         }
+        console.log(data);
         dispatch(addBlogs(data))
         navigate('/home')
     }
@@ -52,35 +53,35 @@ function AddBlog() {
     return (
 
         <div>
-            <h1 style={{textAlign: "center"}}>Add Blogs</h1>
+            <h1 style={{textAlign: "center"}}>Tạo bài viết</h1>
             <Formik initialValues={{
                 title: '',
                 content: '',
+                img:'',
                 url: imageUrls
             }} onSubmit={(values) => {
                 handleAdd(values);
             }}>
                 <Form>
                     <div className="group">
-                        <label htmlFor="exampleInputEmail1">Title</label>
+                        <label htmlFor="exampleInputEmail1">Tiêu đề</label>
                         <Field type={'text'} name={'title'} className={'form-control'}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Contents</label>
+                        <label htmlFor="exampleInputPassword1">Nội dung</label>
                         <Field type={'text'} name={'content'} className={'form-control'}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Image</label>
+                        <label htmlFor="exampleInputPassword1">Ảnh</label>
                         <input
                             type="file" onChange={(event) => {
                             setSubmitting(true)
                             uploadFile(event.target.files[0])
                         }}/>
                     </div>
-                    <button type="submit" disabled={submitting}>Submit</button>
+                    <button type="submit" disabled={submitting}>Đăng</button>
                 </Form>
             </Formik>
-            {/*<button onClick={uploadFile}>Upload</button>*/}
         </div>
     );
 }

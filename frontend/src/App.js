@@ -6,7 +6,7 @@ import Main from "./component/Main";
 import Admin from "./pages/admin/Admin";
 import MListPost from "./pages/admin/manage/M-ListPost";
 import MListUser from "./pages/admin/manage/M-ListUser";
-// import AddBlog from "./pages/home/blog/AddBlog";
+import AddBlog from "./pages/home/blog/AddBlog";
 import Profile from "./component/Profile";
 import {useState} from "react";
 function App() {
@@ -23,7 +23,7 @@ function App() {
                     {user !== null ?
                         <Route path={'home'} element={<Home/>}>
                             <Route path={''} element={<Main/>}></Route>
-                            {/*<Route path={'create-blog'} element={<AddBlog/>}></Route>*/}
+                            <Route path={'create-blog'} element={<AddBlog/>}></Route>
                             <Route path={'me'} element={<Profile/>}></Route>
                         </Route>
                         :
