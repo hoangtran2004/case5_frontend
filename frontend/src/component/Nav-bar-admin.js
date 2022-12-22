@@ -17,13 +17,8 @@ export default function NavBarAdmin() {
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto">
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="/admin/">Người dùng<span className="sr-only">(current)</span></a>
-                                </li>
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="/admin/list-posts">Bài viết<span className="sr-only">(current)</span></a>
-                                </li>
-
+                                    <Link className="nav-link" to="/admin/">Người dùng<span className="sr-only">(current)</span></Link>
+                                    <Link className="nav-link" to="/admin/list-posts">Bài viết<span className="sr-only">(current)</span></Link>
                                 <li>
                                     <Formik initialValues={{
                                         search: ''
