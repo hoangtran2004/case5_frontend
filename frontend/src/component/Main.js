@@ -7,7 +7,6 @@ import PostStatus from "./Post-status";
 export default function Main() {
     const dispatch = useDispatch();
     const blogs = useSelector(state => {
-        console.log(state.blogs.blogs)
         return state.blogs.blogs;
     });
     useEffect(() => {
@@ -17,7 +16,7 @@ export default function Main() {
         <>
             <PostStatus></PostStatus>
             {
-                blogs.map((item) => (
+               blogs.map((item) => (
                     <div className="row" style={{marginTop: '10px'}}>
                         <div className="col-12">
                             <div className="col-6 offset-3">
@@ -86,7 +85,8 @@ export default function Main() {
                         </div>
                         <Outlet></Outlet>
                     </div>
-                ))}
+                ))
+            }
 
         </>
     )

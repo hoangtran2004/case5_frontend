@@ -18,14 +18,12 @@ const adminSlice = createSlice({
         });
         builder.addCase(adminDeleteUser.fulfilled, (state, action) => {
             let newArr = [...state.admin]
-            console.log(action)
             let index = newArr.findIndex(item => item.id === action.meta.arg.id);
             newArr.splice(index, 1);
             state.admin = newArr
         });
         builder.addCase(adminDeletePost.fulfilled, (state, action) => {
             let newArr = [...state.admin]
-            console.log(action)
             let index = newArr.findIndex(item => item.id === action.meta.arg.id);
             newArr.splice(index, 1);
             state.admin = newArr

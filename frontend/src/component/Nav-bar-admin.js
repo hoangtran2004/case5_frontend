@@ -21,7 +21,7 @@ export default function NavBarAdmin() {
                                     <a className="nav-link" href="/admin/">Người dùng<span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="/admin/listBlogs">Bài viết<span className="sr-only">(current)</span></a>
+                                    <a className="nav-link" href="/admin/list-posts">Bài viết<span className="sr-only">(current)</span></a>
                                 </li>
 
                                 <li>

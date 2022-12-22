@@ -1,12 +1,11 @@
 import '../style/post-status.css'
-import {Field, Form, Formik} from "formik";
+import { Form, Formik} from "formik";
 import {Link} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useState} from "react";
+
 export default function PostStatus() {
-    const user = useSelector(state => {
-        console.log(state)
-        return state.user.currentUser.user
-    })
+    let item = JSON.parse(localStorage.getItem('user'));
+    const [user, setUser] = useState(item.data.user)
     return(
         <>
         <div className="row">
@@ -18,9 +17,12 @@ export default function PostStatus() {
                         <Form>
                             <div className="contain-create-post">
                                 <div className="row offset-1">
-                                    <img src={user.avatar} alt={user.name} className={'avatar-post'}/>
+                                    <Link to={'me'}>
+                                        <img src={user.avatar} alt={user.name} className={'avatar-post'}/>
+
+                                    </Link>
                                     <div className={"row offset-1"}>
-                                        <Link to={'tiny'} style={{textDecoration:'none'}}>
+                                        <Link to={'create-blog'} style={{textDecoration:'none'}}>
                                             <div className="up-status" data-toggle="modal" data-target="#exampleModal" >
                                                 <p>Chia sẻ câu chuyện của bạn.</p>
                                             </div>

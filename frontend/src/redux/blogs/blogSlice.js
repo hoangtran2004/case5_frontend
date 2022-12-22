@@ -10,7 +10,7 @@ const blogSlices = createSlice({
     reducers: {},
     extraReducers: builder => {
         builder.addCase(getBlogs.fulfilled, (state, action) => {
-            state.blogs = action.payload
+          state.blogs=action.payload
         })
     }
 

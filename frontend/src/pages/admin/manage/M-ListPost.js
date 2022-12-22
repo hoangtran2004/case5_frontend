@@ -4,8 +4,8 @@ import {adminDeletePost, adminGetBlog} from "../../../services/adminService";
 
 export default function MListUser() {
     const dispatch = useDispatch();
-
     const listUser = useSelector(state => {
+        console.log(state)
         return state.admin.admin
     });
     useEffect(() => {
