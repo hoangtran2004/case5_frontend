@@ -38,10 +38,10 @@ export default function Register() {
                             <Form>
                                 <label></label>
                                 <Field name={'name'} type={'text'} placeholder={'Your account'}
-                                       class={'form-control'} required/>
+                                       class={'form-control'} required style={{marginLeft:'25px'}}/>
                                 <label></label>
                                 <Field name={'password'} type={'password'} placeholder={'Password'}
-                                       class={'form-control'} required/>
+                                       class={'form-control'} required style={{marginLeft:'25px'}}/>
                                 <label></label>
                                 {/*<Field name={'repeatPassword'} id={'repeatPassword'} type={'password'}*/}
                                 {/*       placeholder={'Repeat password'}*/}

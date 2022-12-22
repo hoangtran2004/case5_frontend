@@ -45,10 +45,10 @@ export default function Login() {
                             <Form>
                                 <label></label>
                                 <Field name={'name'} type={'text'} placeholder={'Your account'}
-                                       class={'form-control'} required/>
+                                       class={'form-control'} required  style={{marginLeft:'25px'}}/>
                                 <label></label>
                                 <Field name={'password'} type={'password'} placeholder={'Password'}
-                                       class={'form-control'} required/>
+                                       class={'form-control'} required style={{marginLeft:'25px'}}/>
                                 <button className={'btn btn-primary'} style={{
                                     width: '200px',
                                     height: '50px',
