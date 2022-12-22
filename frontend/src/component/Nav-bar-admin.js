@@ -8,7 +8,7 @@ export default function NavBarAdmin() {
             <div className="row">
                 <div className="col-12" style={{position: "fixed", zIndex: 100}}>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <Link className="navbar-brand" to="/admin">Home</Link>
+                        <Link className="navbar-brand" to="/admin">Trang chủ</Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@ export default function NavBarAdmin() {
                                             <Field className="form-control mr-sm-2" type="search"
                                                    style={{width:'468px',marginLeft:'30px',borderRadius:'50px',height:'45px'}} name={"search"}
                                                    placeholder="Search" ></Field>
-                                            <button className="btn btn-outline-success my-2 my-sm-0">Tìm kiếm</button>
+                                            <button className="btn btn-outline-light my-2 my-sm-0">Tìm kiếm</button>
                                         </Form>
                                     </Formik>
                                 </li>
