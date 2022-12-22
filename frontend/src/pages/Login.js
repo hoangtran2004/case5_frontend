@@ -35,7 +35,7 @@ export default function Login() {
             }}>
                 <div className="RegisterFormWrapper" style={{position:"absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)"}}>
                     <div className="RegisterForm" style={{ display:"inline-block", padding: "20px 30px", borderRadius: "8px"}}>
-                        <h1 className={"text-center"} style={{color:"white"}} >Login</h1>
+                        <h1 className={"text-center"} style={{color:"white"}} >Đăng nhập</h1>
                         <Formik
                             initialValues={{name: '', password: ''}}
                             onSubmit={(values, {resetForm}) => {
@@ -55,10 +55,10 @@ export default function Login() {
                                     marginLeft: '160px',
                                     marginTop: '20px',
                                     borderRadius: '8px'
-                                }}>Login
+                                }}>Đăng nhập
                                 </button>
                                 <hr style={{border: 'solid 0.5px lightgrey', width: '520px'}}/>
-                                <p style={{color: "lightgray"}}>Don't have account? Register now.</p>
+                                <p style={{color: "lightgray"}}>Chưa có tài khoản ? Đăng kí ngay.</p>
                             </Form>
                         </Formik>
                         <button className={'btn btn-success'} style={{
@@ -67,7 +67,7 @@ export default function Login() {
                             marginLeft: '160px',
                             marginBottom: '20px',
                             borderRadius: '8px',
-                        }}><Link to={'/register'} style={{textDecoration: "none", color: 'white'}}>Register</Link>
+                        }}><Link to={'/register'} style={{textDecoration: "none", color: 'white'}}>Đăng kí</Link>
                         </button>
                     </div>
 

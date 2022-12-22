@@ -25,7 +25,7 @@ export default function Register() {
             }}>
                 <div className="LoginFormWrapper" style={{position:"absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)"}}>
                     <div className="LoginForm" style={{ display:"inline-block", padding: "20px 30px", borderRadius: "8px"}}>
-                        <h1 className={"text-center"} style={{color:"white"}} >Register</h1>
+                        <h1 className={"text-center"} style={{color:"white"}} >Đăng kí</h1>
                         <Formik initialValues={
                             {
                                 name: '',
@@ -53,10 +53,10 @@ export default function Register() {
                                     marginLeft: '160px',
                                     marginTop: '20px',
                                     borderRadius: '8px'
-                                }}>Register
+                                }}>Đăng kí
                                 </button>
                                 <hr style={{border: 'solid 0.5px lightgrey', width: '520px'}}/>
-                                <p style={{color: "white"}}>Have account?<Link to={'/'}> Login now.</Link></p>
+                                <p style={{color: "white"}}>Bạn đã có tài khoản ?<Link to={'/'}> Đăng nhập.</Link></p>
 
                             </Form>
                         </Formik>

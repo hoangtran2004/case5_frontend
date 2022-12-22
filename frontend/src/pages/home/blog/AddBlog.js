@@ -83,7 +83,7 @@ function AddBlog() {
                                     uploadFile(event.target.files[0])
                                 }}/>
                             </div>
-                            <button type="submit" disabled={submitting}>Đăng</button>
+                            <button type="submit" disabled={submitting} className={"btn btn-outline-light my-2 my-sm-0"} style={{color:'black'}}>Đăng</button>
                         </Form>
                     </Formik>
                 </div>

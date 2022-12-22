@@ -18,9 +18,11 @@ export default function ListBlog() {
 
     return (
         <>
+            <h1 style={{textAlign:'center'}}>Bài viết của tôi</h1>
             {blogs.map((item)=>{
                 if (user.name===item.name){
                     return(
+
                             <div className="row" style={{marginTop: '10px'}}>
                                 <div className="col-12">
                                     <div className="col-6 offset-3">

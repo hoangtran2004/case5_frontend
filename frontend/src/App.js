@@ -14,7 +14,6 @@ function App() {
     let item = JSON.parse(localStorage.getItem('user'));
     const [user, setUser] = useState(item?.data?.user)
     return (
-
         <>
             <div className="container-fluid">
                 <Routes>

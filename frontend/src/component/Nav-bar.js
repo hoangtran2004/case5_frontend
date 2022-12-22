@@ -45,7 +45,7 @@ export default function NavBar() {
                                                 width: '468px',
                                                 marginLeft: '325px',
                                                 borderRadius: '50px',
-                                                height: '45px'
+                                                height: '45px',
                                             }}></Field>
                                             <button className="btn btn-outline-light my-2 my-sm-0" name={'search'}>Tìm kiếm</button>
                                         </Form>
