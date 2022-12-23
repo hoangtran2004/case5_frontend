@@ -10,7 +10,6 @@ const userSlice = createSlice({
     initialState,
     extraReducers: builder => {
         builder.addCase(login.fulfilled, (state, action) => {
-            console.log(action.payload.data)
             state.currentUser = action.payload.data;
             localStorage.setItem('user', JSON.stringify(action.payload))
         })

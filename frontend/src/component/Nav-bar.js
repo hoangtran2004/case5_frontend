@@ -30,7 +30,6 @@ export default function NavBar() {
                                     <Formik initialValues={{
                                         search: ''
                                     }} onSubmit={(values, {resetForm}) => {
-                                        console.log(values)
                                         if (values === "") {
                                             dispatch(getBlogs())
                                         } else {

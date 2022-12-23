@@ -9,9 +9,10 @@ export default function Main() {
     const blogs = useSelector(state => {
         return state.blogs.blogs;
     });
+
     useEffect(() => {
         dispatch(getBlogs())
-    }, []);
+    },[blogs]);
     return (
         <>
             <PostStatus></PostStatus>

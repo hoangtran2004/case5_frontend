@@ -29,7 +29,7 @@ export default function MListUser() {
                     <th scope="col">Thao tác</th>
                 </tr>
                 </thead>
-                {listPosts.map((item, index) => (
+                {listPosts?.map((item, index) => (
                     <tbody>
                     <tr>
                         <td>{index + 1}</td>
@@ -43,7 +43,7 @@ export default function MListUser() {
                         <td>{item.content}</td>
                         <td>
                             <button className="btn btn-danger" onClick={()=>{
-                             dispatch(adminDeletePost({id:item.id}))
+                             dispatch(adminDeletePost({id:item?.id}))
                             }}>Xóa bài </button>
                         </td>
                     </tr>

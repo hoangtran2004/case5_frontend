@@ -9,10 +9,8 @@ export default function Login() {
     const navigate = useNavigate();
     const handleLogin = async (values) => {
         let res = await dispatch(login(values));
-        console.log("res", res)
         if (res.payload.data.token) {
             const {role, status} = res.payload.data.user
-            console.log("st", typeof status)
             if (role === 2) {
                 navigate('/admin')
             } else if (role === 1) {

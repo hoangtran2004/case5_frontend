@@ -1,17 +1,19 @@
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getBlogs} from "../../../services/blogsService";
+import {getBlogs,userDeletePosts} from "../../../services/blogsService";
 
 
 export default function ListBlog() {
     const blogs = useSelector(({blogs}) => {
+
         return blogs.blogs
     })
-
+    let navigate=useNavigate();
     let item = JSON.parse(localStorage.getItem('user'));
     const [user, setUser] = useState(item.data.user)
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(getBlogs())
     }, []);
@@ -31,6 +33,7 @@ export default function ListBlog() {
                                             {/*header*/}
                                             <div className="main-header">
                                                 <div className="row offset-1">
+
                                                     <div>
                                                         <Link to={'#'}>
                                                             <img
@@ -47,6 +50,10 @@ export default function ListBlog() {
                                                             {item.time}
                                                         </div>
                                                     </div>
+                                                    <button onClick={async ()=>{
+                                                        await dispatch(userDeletePosts({id:item.id}))
+                                                      await  dispatch(getBlogs())
+                                                    }} className={"btn btn-danger"} style={{marginLeft:'479px'}}>Xóa</button>
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-12">

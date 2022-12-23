@@ -15,14 +15,12 @@ function AddBlog() {
     const navigate = useNavigate();
 
     const [submitting, setSubmitting] = useState(false)
-    console.log('user',user)
     const handleAdd = (values) => {
         let data = {
             ...values,
             idU: user.id,
             img: img
         }
-        console.log(data);
         dispatch(addBlogs(data))
         navigate('/home')
     }

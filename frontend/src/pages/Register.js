@@ -8,7 +8,6 @@ export default function Register() {
     const navigate = useNavigate();
     const handleRegister = async (values) => {
         let res = await dispatch(register(values));
-        console.log(res)
         if (res.payload.checkR === true){
 
             await navigate('/');
