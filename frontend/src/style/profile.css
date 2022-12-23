@@ -1,6 +1,6 @@
 
 .container-profile {
-    height: 500px;
+    height: 470px;
     width: 500px;
 }
 
@@ -18,8 +18,6 @@
 
 .card--header {
     height: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     background-image: url('https://lh3.googleusercontent.com/OyV3hS9LwPSWPZAG17aO4P-JlFNx9iMMRcEWMeBzhwby4VMZ66KWr-GnfVU4OsQD-XcLjYJJuPnUzNDekdwFMnh-TkdFyasjbCtszLMlFXagnBjfgU9gfB6N656C8EQyUjyUIwE4FGnk0loKP_11UYl5qm_s6Tij1WlOCGOHmd34F-iLXFD2bILOhZhnqpjxD2VXEAdCONI16nb__qxwm8ZXtaS0LP54t-jTxB8UBE8Mle6e0UGxs1soHpbib-YdhV82DzJRI8bnC-mb6XR3cLelwXBs6GY2-WmLL4QDxT3ji5cAzZi7eR-CTz9CrGwkc0L1ZTdccovv_ulTV84m4DA4fh8lu0MtPujjvO2GipI_CleljXJbL_9f4j_wOpUK-kARdDntfp1Kxm-k0D9oj6M_OxHSdXh1_wJ1pBwGD0-gNSb0SFcxu0INvkjEwrsx1QRL5-tueonGXguhvM7gfcwO8Qjfc9kMFfnNTsCTfLdE8puCSoTtC86XIv6O6LxrScKWAqayKdLZmDV4mxQcx5OQ6aolLKwtFoIuDewHHEKEDO04YlpjMzh0kPfoIeEl8lqxvFH2OAKURjWjYjFfHwJ5QnGDEHf25fJOvH15OXSPlyTRRCDVM7YborzZTFayG7ZvZSABGWmGMZir7eGKCyaFMM14jldHql07_QMIz1OxQYDZmQZyLKc9P0KXD6ljyWAeGkydqdFSptglvGFGf9VdRM-dBeNr2R_QfQAggVC6iJLEEAQU7Hxpi4xzjJ50Qoe4LxWVwNx-B5yrFw628X88WwwuAo7GagX4EIXIKsLU2NiE84IVDQa5TL4CT3ZLAOowDLX-Yrd5yroR1SeSjb7shyjTRIhptR-c3Ej2MQDd3o-G75e3_sWkxXbcsi5SXZJeC_xFx4skUCxbjVKdVy48nzD4FhNW_G2WuiNNzQLA3dB3=w1865-h950-no?authuser=0');
 
 }

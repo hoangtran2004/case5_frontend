@@ -7,7 +7,7 @@ export default function Profile() {
     return(
         <>
             <div className="col">
-                <div className="row-12">
+                <div className="row-12" style={{marginTop:'-36px'}}>
                     <div className="col-8 offset-2">
                         <div className="container-profile">
                             <div className="card">

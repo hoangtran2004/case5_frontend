@@ -18,6 +18,7 @@ export default function ListBlog() {
 
     return (
         <>
+            <hr style={{width:'970px',}}/>
             <h1 style={{textAlign:'center'}}>Bài viết của tôi</h1>
             {blogs.map((item)=>{
                 if (user.name===item.name){
